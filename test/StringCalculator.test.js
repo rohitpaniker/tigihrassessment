@@ -30,12 +30,20 @@ describe('StringCalculator', () => {
   });
   
   test('should return total sum of all comma-separated and newline separated numbers provided as input', () => {
-    // This test will PASS
     expect(calculator.add("1\n2,3")).toBe(6);
   });
   
   test('should return total sum of all numbers separated by different delimiters provided as input', () => {
-    // This test will PASS
     expect(calculator.add("//;\n1;2")).toBe(3);
+  });
+
+  test('should throw exception for negative numbers', () => {
+    // Single negative number - will FAIL (RED phase)
+    expect(() => calculator.add("-1")).toThrow("negative numbers not allowed -1");
+    expect(() => calculator.add("1,-2")).toThrow("negative numbers not allowed -2");
+    
+    // Multiple negative numbers - show all in exception
+    expect(() => calculator.add("-1,-2")).toThrow("negative numbers not allowed -1,-2");
+    expect(() => calculator.add("1,-2,3,-4")).toThrow("negative numbers not allowed -2,-4");
   });
 });
