@@ -11,13 +11,14 @@ class StringCalculator {
       return 0;
     }
 
-    // Handle single, comma and newline separated numbers
+    // Handle single, comma, newline or any delimiter separated numbers using Regex
     if (numbers.includes(",")) {
         const onlyNumbers = numbers.match(/\d+/g).join();
         const parts = onlyNumbers.split(",");
         const addAll = parts.reduce((accumlator, currentValue) => accumlator = parseInt(accumlator) + parseInt(currentValue));
         return parseInt(addAll);
     }
+    
     return parseInt(numbers);
     // We'll add more logic later for other cases
   }
