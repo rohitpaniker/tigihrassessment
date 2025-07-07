@@ -2,7 +2,7 @@
 class StringCalculator {
     add(numbers) {
         // This will extract clean numbers mixed in commas, newline or any special char delimiters
-        const _numbers = (numbers.length === 0) ? numbers : numbers.match(/\d+/g).join()
+        const _numbers = (numbers.length === 0) ? numbers : numbers.match(/-?\d+(\.\d+)?/g).join()
 
         if (_numbers === "") {
             return 0;

@@ -38,11 +38,11 @@ describe('StringCalculator', () => {
   });
 
   test('should throw exception for negative numbers', () => {
-    // Single negative number - will FAIL (RED phase)
+    // Single negative number - will PASS (GREEN phase)
     expect(() => calculator.add("-1")).toThrow("negative numbers not allowed -1");
     expect(() => calculator.add("1,-2")).toThrow("negative numbers not allowed -2");
     
-    // Multiple negative numbers - show all in exception
+    // Multiple negative numbers - show all in exception will PASS (GREEN PHASE)
     expect(() => calculator.add("-1,-2")).toThrow("negative numbers not allowed -1,-2");
     expect(() => calculator.add("1,-2,3,-4")).toThrow("negative numbers not allowed -2,-4");
   });
