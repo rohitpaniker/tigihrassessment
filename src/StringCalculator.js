@@ -14,7 +14,7 @@ class StringCalculator {
     // Handle comma-separated numbers - minimal implementation
     if (numbers.includes(",")) {
         const parts = numbers.split(",");
-        return parts[0]+parts[1];
+        return parseInt(parts[0])+parseInt(parts[1]);
     }
 
     // Handle single number: minimal implementation to make test pass
