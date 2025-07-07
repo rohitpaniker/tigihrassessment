@@ -29,4 +29,9 @@ describe('StringCalculator', () => {
     expect(calculator.add("2,4,6,8")).toBe(20);
     expect(calculator.add("10,20,30,40")).toBe(100);
   });
+  
+  test('should return total sum of all comma-separated and newline separated numbers provided as input', () => {
+    // This test will PASS initially (GREEN phase)
+    expect(calculator.add("1\n2,3")).toBe(6);
+  });
 });
