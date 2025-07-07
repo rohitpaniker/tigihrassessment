@@ -18,14 +18,13 @@ describe('StringCalculator', () => {
   });
 
   test('should return sum of two comma-separated numbers', () => {
-    // This test will FAIL initially (RED phase)
     expect(calculator.add("1,5")).toBe(6);
     expect(calculator.add("2,3")).toBe(5);
     expect(calculator.add("10,20")).toBe(30);
   });
   
   test('should return total sum of all comma-separated numbers provided as input', () => {
-    // This test will FAIL initially (RED phase)
+    // This test will FAIL initially (RED phase): returns concatenated values instead of total sum
     expect(calculator.add("1,2,3,4,5")).toBe(15);
     expect(calculator.add("2,4,6,8")).toBe(20);
     expect(calculator.add("10,20,30,40")).toBe(100);
