@@ -13,7 +13,8 @@ class StringCalculator {
 
     // Handle comma-separated numbers
     if (numbers.includes(",")) {
-        const parts = numbers.split(",");
+        const onlyNumbers = numbers.match(/\d+/g);
+        const parts = onlyNumbers.split(",");
         const addAll = parts.reduce((accumlator, currentValue) => accumlator = parseInt(accumlator) + parseInt(currentValue));
         return parseInt(addAll);
     }
