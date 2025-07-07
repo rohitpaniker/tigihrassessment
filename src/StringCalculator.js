@@ -11,6 +11,12 @@ class StringCalculator {
       return 0;
     }
 
+    // Handle comma-separated numbers - minimal implementation
+    if (numbers.includes(",")) {
+        const parts = numbers.split(",");
+        return parts[0]+parts[1];
+    }
+
     // Handle single number: minimal implementation to make test pass
     return parseInt(numbers);
     // We'll add more logic later for other cases
