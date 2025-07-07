@@ -15,7 +15,7 @@ class StringCalculator {
     if (numbers.includes(",")) {
         const parts = numbers.split(",");
         const addAll = parts.reduce((accumlator, currentValue) => accumlator = parseInt(accumlator) + parseInt(currentValue));
-        return parseInt(parts[0])+parseInt(parts[1]);
+        return parseInt(addAll);
     }
 
     // Handle single number: minimal implementation to make test pass
