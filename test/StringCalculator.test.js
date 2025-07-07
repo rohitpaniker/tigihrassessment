@@ -35,7 +35,7 @@ describe('StringCalculator', () => {
   });
   
   test('should return total sum of all numbers separated by different delimiters provided as input', () => {
-    // This test will FAIL
+    // This test will PASS
     expect(calculator.add("//;\n1;2")).toBe(3);
   });
 });
