@@ -1,5 +1,5 @@
-// Since this is the first simple case, there's not much to refactor yet.
-// The code is already clean and simple. Refactoring will become more 
+// The code is already clean and simple. 
+// Refactoring will become more 
 // important as we add more test cases and functionality.
 
 class StringCalculator {
@@ -11,6 +11,8 @@ class StringCalculator {
       return 0;
     }
 
+    // Handle single number: minimal implementation to make test pass
+    return parseInt(numbers);
     // We'll add more logic later for other cases
   }
 }
