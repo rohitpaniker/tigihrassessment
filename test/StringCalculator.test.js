@@ -1,5 +1,3 @@
-// RED PHASE: Write the failing test first
-
 const StringCalculator = require('../src/StringCalculator');
 
 describe('StringCalculator', () => {

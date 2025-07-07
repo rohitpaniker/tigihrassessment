@@ -1,3 +1,7 @@
+// Since this is the first simple case, there's not much to refactor yet.
+// The code is already clean and simple. Refactoring will become more 
+// important as we add more test cases and functionality.
+
 class StringCalculator {
   add(numbers) {
     // Test for empty input. 
