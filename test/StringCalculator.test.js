@@ -16,4 +16,11 @@ describe('StringCalculator', () => {
     expect(calculator.add("2")).toBe(2);
     expect(calculator.add("12")).toBe(12);
   });
+
+  test('should return sum of two comma-separated numbers', () => {
+    // This test will FAIL initially (RED phase)
+    expect(calculator.add("1,5")).toBe(6);
+    expect(calculator.add("2,3")).toBe(5);
+    expect(calculator.add("10,20")).toBe(30);
+  });
 });
