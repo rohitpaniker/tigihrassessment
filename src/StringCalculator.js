@@ -21,7 +21,8 @@ class StringCalculator {
         }
 
         return parseInt(_numbers);
-        // We'll add more logic later for other cases
+        
+        // We can add more logic later for other cases
     }
 
     extractCleanNumbers(num) {
