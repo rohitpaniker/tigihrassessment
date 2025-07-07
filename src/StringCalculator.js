@@ -1,20 +1,17 @@
 
 class StringCalculator {
     add(numbers) {
-        // This will extract clean numbers mixed in commas, newline or any special char delimiters
-        const _numbers = (numbers.length === 0) ? numbers : numbers.match(/-?\d+(\.\d+)?/g).join()
+        // This will extract clean numbers mixed in commas, newline or any special char or delimiters
+        const _numbers = this.extractCleanNumbers(numbers);
 
         if (_numbers === "") {
             return 0;
         }
-        
+
         const numArray = _numbers.split(",");
-        
+
         // Negative number check
-        const negatives = numArray.filter(num => num < 0);
-        if (negatives.length > 0) {
-            throw new Error(`negative numbers not allowed ${negatives.join(',')}`)
-        }
+        this.validateNoNegatives(numArray);
 
         // Process if no negative numbers
         // Handle single, comma, newline or any delimiter separated numbers using Regex
@@ -25,6 +22,17 @@ class StringCalculator {
 
         return parseInt(_numbers);
         // We'll add more logic later for other cases
+    }
+
+    extractCleanNumbers(num) {
+        return (num.length === 0) ? num : num.match(/-?\d+(\.\d+)?/g).join()
+    }
+
+    validateNoNegatives(numbersArray) {
+        const negatives = numbersArray.filter(num => num < 0);
+        if (negatives.length > 0) {
+            throw new Error(`negative numbers not allowed ${negatives.join(',')}`)
+        }
     }
 }
 
